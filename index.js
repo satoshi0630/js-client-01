@@ -6,12 +6,12 @@ const btn = document.getElementById('btn');
 const result = document.getElementById('result');
 
 btn.addEventListener('click',()=>{
-    let findtxt = input1.value;
-    let reptxt = input2.value;
-    let tagtxt = tarea.value;
+  let findtxt = input1.value;
+  let reptxt = input2.value;
+  let tagtxt = tarea.value;
 
-    findtxt = new Regtxt(findtxt, 'g');
-    tagtxt = tagtxt.replace(findtxt, reptxt);
+  findtxt = new RegExp(findtxt, 'g');
+  tagtxt = tagtxt.replace(findtxt, reptxt);
 
-    result.innerText = tagtxt;
+  result.innerText = tagtxt;
 });
